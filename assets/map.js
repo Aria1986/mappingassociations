@@ -9,6 +9,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         // creation des icones:
 
 var cafe = L.icon({
+    className:'cafe',
     iconUrl: 'coffee.png',
 
     iconSize:     [32, 32], // size of the icon
@@ -19,6 +20,7 @@ var cafe = L.icon({
 });
 
 var shirt = L.icon({
+    className:'shirt',
     iconUrl: 'assets/img/shirt.svg',
     iconSize:     [32, 32], // size of the icon
 
@@ -27,6 +29,7 @@ var shirt = L.icon({
 });
 
 var douche = L.icon({
+    className:'douche',
     iconUrl: 'assets/img/shower.svg',
     iconSize:     [32, 32], // size of the icon
 
@@ -35,6 +38,7 @@ var douche = L.icon({
 });
 
 var bouffe = L.icon({
+    // className:'bouffe',
     iconUrl: 'assets/img/food.svg',
     iconSize:     [32, 32], // size of the icon
 
@@ -77,3 +81,11 @@ L.marker([45.1655149, 5.7302683], {icon: bouffe}).addTo(map)
     .openPopup();  
 
 
+function afficher(type){
+    const tousElements = document.getElementsByClassName('leaflet-marker-icon')
+    for(var i=0 ; i<3; i++){
+    tousElements.item(i).style.display = 'none';
+    }  
+    const elementsAAfficher= document.getElementsByClassName(type)
+    elementsAAfficher.style.display = 'block';
+}
