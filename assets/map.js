@@ -46,6 +46,15 @@ var bouffe = L.icon({
     popupAnchor:  [-3, -15] // point from which the popup should open relative to the iconAnchor
 });
 
+var meuble = L.icon({
+    className:'meuble',
+    iconUrl: 'assets/img/meuble.svg',
+    iconSize:     [32, 32], // size of the icon
+
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -15] // point from which the popup should open relative to the iconAnchor
+});
+
 
         // placement des markers
     // markers cafés associatifs
@@ -78,6 +87,11 @@ L.marker([45.1663415, 5.7324629], {icon: bouffe}).addTo(map)
 
 L.marker([45.1655149, 5.7302683], {icon: bouffe}).addTo(map)
     .bindPopup("Secours Populaire : Distributions alimentaires, 8 rue des Peuplier (site des Trembles), Lundi, mardi, mercredi, jeudi et vendredi de 13h30 à 16h30")
+    .openPopup();  
+
+     // markers magasins immobilier
+L.marker([45.1694691, 5.752196], {icon: meuble}).addTo(map)
+    .bindPopup("ULISSE La Brocante de Mamie  17 rue du Pré Ruffier, 38400 Saint Martin d'Hères- Lundi de 13h à 16h45, Mardi, jeudi et vendredi de 9h à 13h et de 14h à 16h45, Fermé le mercredi")
     .openPopup();  
 
 
