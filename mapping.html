@@ -15,19 +15,21 @@
 </head>
 <body>
     <h1>Carte des différentes aides</h1>
-<div>
+<div class="container">
+    <div id="legende">
     <p></p><img src="assets/img/shirt.svg" > magasin vestimentaire d'occasion</p>
     <p></p><img src="coffee.png" > cafés associatifs</p>
     <p></p><img src='assets/img/shower.svg' > douches municipales</p>
     <p></p><img src="assets/img/food.svg" > lieu de distribution alimentaire</p>
-</div>
+    </div>
 
     <div id="map"></div>
-<button onclick="afficher('shirt')">afficher les magasins vestimentaires</button>
-<button onclick="afficher('cafe')">afficher les cafés associatifs</button>
-<button onclick="afficher('douche')">afficher les douches municipales</button>
-<button onclick="afficher('bouffe')">afficher les lieux de distribution alimentaire</button><br>
-<button onclick="afficherTout()">afficher tous les lieux </button>
+</div>
+    <button class="btn" onclick="afficher('shirt')">afficher les magasins vestimentaires</button>
+    <button class="btn" onclick="afficher('cafe')">afficher les cafés associatifs</button>
+    <button class="btn" onclick="afficher('douche')">afficher les douches municipales</button>
+    <button class="btn" onclick="afficher('bouffe')">afficher les lieux de distribution alimentaire</button><br>
+    <button class="btn" onclick="afficherTout()">afficher tous les lieux </button>
 
    
 </body>
