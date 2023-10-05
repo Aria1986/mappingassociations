@@ -38,7 +38,7 @@ var douche = L.icon({
 });
 
 var bouffe = L.icon({
-    // className:'bouffe',
+    className:'bouffe',
     iconUrl: 'assets/img/food.svg',
     iconSize:     [32, 32], // size of the icon
 
@@ -83,9 +83,19 @@ L.marker([45.1655149, 5.7302683], {icon: bouffe}).addTo(map)
 
 function afficher(type){
     const tousElements = document.getElementsByClassName('leaflet-marker-icon')
-    for(var i=0 ; i<3; i++){
+    for(var i=0 ; i<tousElements.length; i++){
     tousElements.item(i).style.display = 'none';
     }  
     const elementsAAfficher= document.getElementsByClassName(type)
-    elementsAAfficher.style.display = 'block';
+    for(var j=0 ; j<elementsAAfficher.length; j++){
+        elementsAAfficher.item(j).style.display = 'block';
+        } 
+}
+
+function afficherTout(){
+    const tousElements = document.getElementsByClassName('leaflet-marker-icon')
+    for(var i=0 ; i<tousElements.length; i++){
+    tousElements.item(i).style.display = 'block';
+    }  
+    
 }
